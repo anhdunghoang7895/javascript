@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>CACULATOR</p>
+<form id="cal" action="/action_page.php">
+    <Input type="number" id="left">
+    <Input type="number" id="right">
+</form>
+<script>
+    var x = document.getElementById("left").value;
+    var y = document.getElementById("right").value;
+</script>
+<button type="button" onclick="myFunction();">Addition(+)</button>
+<script>
+    function myFunction(){
+        var z = x+y;
+        document.write("result:" +z);
+    }
+</script>
+<button type="button" onclick="result();">Subtracion(-)</button>
+<script>
+    function result() {
+        var a = x-y;
+        document.write("result:" +a)
+    }
+</script>
+<button type="button" onclick="myFunction();">Multiplication(X)</button>
+<button type="button" onclick="myFunction();">Division(/)</button>
+
+</body>
+</html>

@@ -6,15 +6,6 @@
 </script>
 <body>
 <script>
-    var diemtoan =x;
-    var alchemy =y;
-    var bio =z;
-    var Celsius = C;
-    var fahrenheit = f;
-    var dientichhinhtron = S;
-    var bankinh = r;
-</script>
-<script>
     var x = parseInt(prompt("nhập điểm toán"));
     var y = parseInt(prompt("nhập điểm hóa"));
     var z = parseInt(prompt("nhập điểm sinh"));
@@ -35,6 +26,9 @@
     var r = parseInt(prompt("nhập bán kính"));
     var S = (r^2) * 3.14;
     document.write("diện tích hình tròn là:" + S);
+    document.write("<br/>");
+    var C = 2*3.14*r;
+    document.write("chu vi hình tròn là:" + C);
 </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>Chuyển đổi tiền tệ</p>
+<form id="tiente" action="/action_page.php">
+    amount: <input type="number" id="demo" value="x">
+    From Currency:<select id="from" size="1">
+    <option>USD</option>
+</select>
+    To currency: <select id="to" size="1">
+    <option>VND</option>
+</select>
+</form>
+<button type="button" onclick="myFunction();">Convert</button>
+<script>
+    function myFunction(){
+        var x = document.getElementById("demo").value;
+        var y = x*23000;
+        document.write("Result:" + y);
+
+    }
+
+</script>
+
+</body>
+</html>
