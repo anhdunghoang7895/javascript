@@ -1,30 +1,52 @@
 <html>
 <body>
-<p>CACULATOR</p>
-<form id="cal" action="/action_page.php">
+<p>CALCULATOR</p>
+<form id="cal">
     <Input type="number" id="left">
     <Input type="number" id="right">
+    <h1 id ="Maytinh"></h1>
 </form>
+<button  onclick="myFunction1();">Addition(+)</button>
 <script>
-    var x = document.getElementById("left").value;
-    var y = document.getElementById("right").value;
-</script>
-<button type="button" onclick="myFunction();">Addition(+)</button>
-<script>
-    function myFunction(){
-        var z = x+y;
-        document.write("result:" +z);
+
+    function myFunction1(){
+        var x = document.getElementById("left").value;
+        var y = document.getElementById("right").value;
+        var z = parseInt(x) + parseInt(y);
+        document.getElementById("Maytinh").innerHTML= ("Dap An:" + z);
     }
 </script>
 <button type="button" onclick="result();">Subtracion(-)</button>
 <script>
     function result() {
-        var a = x-y;
-        document.write("result:" +a)
+        var x = document.getElementById("left").value;
+        var y = document.getElementById("right").value;
+        var a = parseInt(x) - parseInt(y);
+        document.getElementById("Maytinh").innerHTML= "Dap An:" + a;
     }
 </script>
-<button type="button" onclick="myFunction();">Multiplication(X)</button>
-<button type="button" onclick="myFunction();">Division(/)</button>
+<button type="button" onclick="myFunction2();">Multiplication(X)</button>
+<script>
+
+    function myFunction2(){
+        var x = document.getElementById("left").value;
+        var y = document.getElementById("right").value;
+        var b = parseInt(x) * parseInt(y);
+
+        document.getElementById("Maytinh").innerHTML= ("Dap An:" + b);
+    }
+</script>
+<button type="button" onclick="myFunction3();">Division(/)</button>
+<script>
+
+    function myFunction3(){
+        var x = document.getElementById("left").value;
+        var y = document.getElementById("right").value;
+        var c = parseInt(x) / parseInt(y);
+
+        document.getElementById("Maytinh").innerHTML= ("Dap An:" + c);
+    }
+</script>
 
 </body>
 </html>
