@@ -1,0 +1,23 @@
+<html>
+<head>
+
+</head>
+<body>
+<p>DO YOU LOVE ME?</p>
+<button onclick="yes()">YES!</button>
+<input type="button" id='khong' value="NO!" onmouseover="no()" style="position: absolute">
+<script>
+    function yes() {
+        alert("it's just frank,bruh");
+        
+    }
+    function no() {
+        var a = Math.round(Math.random()*window.innerHeight);
+        var b = Math.round(Math.random()*window.innerWidth);
+        console.log(b);
+        document.getElementById('khong').style.left= a + 'px';
+        document.getElementById('khong').style.top= b + 'px';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1 id="account"></h1>
+<h2 id="security"></h2>
+<script>
+    var userName = prompt("Who's there?");
+    if (userName === "admin"){
+        document.getElementById("account").innerHTML= ("Welcome!");
+        var pass = prompt("password?");
+        if (pass === "themaster"){
+            document.getElementById("security").innerHTML= ("start working!");
+        }
+        else if (pass !== "themaster"){
+            document.getElementById("security").innerHTML= ("Cops are coming!");
+        }
+    }
+    else if (userName !== "admin"){
+        document.getElementById("account").innerHTML= ("who's there? STOP!");
+    }
+</script>
+</body>
+</html>
