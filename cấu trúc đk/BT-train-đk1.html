@@ -1,0 +1,54 @@
+<!DOCTYPEhtml>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1 id="chiahet"></h1>
+<script>
+    var a = parseInt(prompt("nhập a"));
+    var b = parseInt(prompt("nhập b"));
+    divide = (a/b === 0) ? "a chia hết cho b" : "a  không chia hết cho b";
+    document.getElementById("chiahet").innerHTML = divide;
+</script>
+<h2 id="tuoi"></h2>
+<script>
+    var age = parseInt(prompt("nhập tuổi"));
+    if (age < 16){
+        document.getElementById("tuoi").innerHTML= "chưa đủ tuổi vào lớp 10";
+    }
+</script>
+<h3 id="compare"></h3>
+<script>
+    var number = parseInt(prompt("nhập số"));
+    comp = (number > 0) ? "số lớn hơn không" : "số nhỏ hơn không";
+    document.getElementById("compare").innerHTML = ""+ comp;
+</script>
+<h4 id="songuyen"></h4>
+<script>
+    songuyen1= parseInt(prompt("số nguyên 1"));
+    songuyen2= parseInt(prompt("số nguyên 2"));
+    songuyen3= parseInt(prompt("số nguyên 3"));
+    if ((songuyen1 > songuyen2)&&(songuyen1 > songuyen3)){
+        document.getElementById("songuyen").innerHTML= songuyen1 + " là số lớn nhất";
+    } else if (songuyen2 > songuyen3){
+        document.getElementById("songuyen").innerHTML= songuyen2 + " là số lớn nhất";
+    } else document.getElementById("songuyen").innerHTML= songuyen3 + " là số lớn nhất";
+</script>
+<script>
+    var testpoint= parseInt(prompt("điểm kiểm tra"));
+    var midterm= parseInt(prompt("diểm giữa kì"));
+    var endterm= parseInt(prompt("điểm cuối kì"));
+    var TBC= (testpoint + midterm + endterm)/3;
+    if (TBC >8){
+        alert("giỏi");
+    }else if (TBC > 6.5){
+        alert("khá");
+    }else if (TBC > 5){
+        alert ("Trung bình");
+    } else if (TBC > 3.5){
+        alert("yếu");
+    } else alert ("kém");
+</script>
+</body>
+</html>
