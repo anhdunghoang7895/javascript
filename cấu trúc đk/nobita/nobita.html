@@ -1,0 +1,42 @@
+<html>
+<body onload="sansang()">
+<img id="nobita" src="nobita.PNG" style="position: absolute;top:0;left:0;" height="276" width="211"/>
+<script>
+    function bamlen(){
+        var vitri= document.getElementById("nobita");
+        vitri.style.top = parseInt(vitri.style.top) - 5 + "px";
+    }
+    function bamxuong(){
+        var vitri= document.getElementById("nobita");
+        vitri.style.top = parseInt(vitri.style.top) + 5 + "px";
+    }
+    function bamtrai() {
+        var vitri= document.getElementById("nobita");
+        vitri.style.left= parseInt(vitri.style.left) - 5 + "px";
+    }
+    function bamphai(){
+        var vitri= document.getElementById("nobita");
+        vitri.style.left= parseInt(vitri.style.left) + 5 + "px";
+    }
+    function  chonbutton(evt) {
+        switch (evt.keyCode){
+            case 37:
+                bamtrai();
+                break;
+            case 39:
+                bamphai();
+                break;
+            case 38:
+                bamlen();
+                break;
+            case 40:
+                bamxuong();
+                break;
+        }
+    }
+    function sansang() {
+        window.addEventListener("keydown", chonbutton);
+    }
+</script>
+</body>
+</html>
