@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript"></script>
+</head>
+<body>
+<h1 id="hien"></h1>
+<script>
+    var N;
+    var text;
+    for (N=0; N <=5; N++){
+        text += "số N là " + N + "<br>";
+        document.getElementById("hien").innerHTML = text;
+    }
+
+</script>
+<h2 id="tongso"></h2>
+<script>
+    var so= parseInt(prompt("nhập số"));
+    var tong= 0;
+    for (so > 0; so--;){
+        tong = tong + so;
+        document.getElementById("tongso").innerHTML= tong;
+    }
+</script>
+
+</body>
+</html>

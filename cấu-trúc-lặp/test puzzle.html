@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>puzzle game</title>
+</head>
+<body>
+<img onclick='pic1()' class='hinh1' src='anh/1.png'><br>
+<img class='hinh1' src='anh/2.png' onclick='pic1()'><br>
+<img class='hinh1' src="anh/3.png" onclick="pic1()"><br>
+<img class='hinh1' src="anh/4.png" onclick="pic1()"><br>
+<script>
+    function pic1() {
+        var hinhRandom;
+        var ranNumber;
+        ranNumber = Math.floor(Math.random() * 7) + 1;
+        console.log(ranNumber);
+        switch (ranNumber) {
+            case 1 :
+                hinhRandom = 'anh/1.png';
+                break;
+            case 2 :
+                hinhRandom = 'anh/2.png';
+                break;
+            case 3 :
+                hinhRandom = 'anh/3.png';
+                break;
+            case 4 :
+                hinhRandom = 'anh/4.png';
+                break;
+            case 5 :
+                hinhRandom = 'anh/5.png';
+                break;
+            case 6 :
+                hinhRandom = 'anh/6.png';
+                break;
+            case 7 :
+                hinhRandom = 'anh/7.png';
+                break;
+            case 8 :
+                hinhRandom = 'anh/8.png';
+                break;
+        }
+        document.getElementsByClassName('hinh1').src = hinhRandom;
+    }
+</script>
+</body>
+</html>

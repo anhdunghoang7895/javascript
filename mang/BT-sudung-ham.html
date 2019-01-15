@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var myColor = ['red','green','white','black'];
+    document.write(myColor.toString(' ')+ "</br>");
+</script>
+<script>
+    var insert = prompt("nhập số");
+    var chuoi = insert.toString();
+    var number = [chuoi[0]];
+    for (var i= 0; i < chuoi.length; i++){
+         if ((chuoi[i-1]%2 ===0)&&(chuoi[i]%2 ===0)){
+             number.push('-', chuoi[i]);
+         }
+         else {
+             number.push(chuoi[i]);
+         }
+     }
+    document.write(number + "</br>");
+
+</script>
+<script>
+    var text = "The Quick Brown Fox";
+    var Caplock= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var lowcap= "abcdefghijklmnopqrstuvwxyz";
+    var change= [];
+    for (var i = 0; i < text.length; i++) {
+        if (Caplock.indexOf(text[i] !== -1)) {
+            change.push(text[i].toLowerCase());
+            console.log(change);
+        }
+        else if(lowcap.indexOf(str[x]) !== -1) {
+                change.push(str[x].toUpperCase());
+            }
+            else {
+                change.push(str[x]);
+            }
+        }
+    document.write(change.join(''));
+</script>
+</body>
+</html>

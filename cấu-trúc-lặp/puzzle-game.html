@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>puzzle game</title>
+</head>
+<body>
+<img onclick='pic1()' id='hinh1' src='anh/1.png'><br>
+<img id='hinh2' src='anh/2.png' onclick='pic2()'><br>
+<img id="hinh3" src="anh/3.png" onclick="pic3()"><br>
+<img id="hinh4" src="anh/4.png" onclick="pic4()"><br>
+<script>
+    function pic1() {
+        var hinhRandom;
+        var ranNumber;
+        ranNumber = Math.floor(Math.random() * 4) + 1;
+        console.log(ranNumber);
+        switch (ranNumber) {
+            case 1 :
+                hinhRandom = 'anh/1.png';
+                break;
+            case 2 :
+                hinhRandom = 'anh/5.png';
+                break;
+        }
+        document.getElementById('hinh1').src = hinhRandom;
+    }
+    function pic2() {
+        var hinhrandom2;
+        var ranNumber;
+        ranNumber = Math.floor(Math.random() * 5) + 1;
+        console.log(ranNumber);
+        switch (ranNumber) {
+            case 1 :
+                hinhRandom = 'anh/2.png';
+                break;
+            case 2 :
+                hinhRandom = 'anh/6.png';
+                break;
+        }
+        document.getElementById('hinh2').src = hinhrandom2;
+    }
+    function pic3() {
+        document.getElementById('hinh3').src = 'anh/7.png'
+    }
+    function pic4() {
+        document.getElementById('hinh4').src = 'anh/8.png'
+    }
+</script>
+</body>
+</html>
