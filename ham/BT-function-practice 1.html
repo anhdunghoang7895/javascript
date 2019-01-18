@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập hàm 1</title>
+</head>
+<body>
+<script>
+    alertMessage();
+    function alertMessage() {
+        alert("xin chào");
+    }
+</script>
+<script>
+    var number = 0;
+    upByOne();
+    function upByOne(number) {
+        number += 1;
+        return number;
+    }
+    number = upByOne();
+    document.write("giá trị trả lại: "  + number + "</br>");
+
+</script>
+<script>
+    var a = parseInt(prompt("nhập a: "));
+    var b = parseInt(prompt("nhập b: "));
+    Compare();
+    function Compare() {
+        if (a > b){
+            alert(a + " lớn hơn " + b);
+        }
+        else {
+            sum = a + b;
+            document.write("tổng 2 số: " + sum + "</br>");
+        }
+    }
+</script>
+<script>
+    function addNumbers() {
+        var firstNum = 4;
+        var secondNum = 8;
+        result = firstNum + secondNum;
+        alert(result);
+        return result;
+    }
+    result = 0;
+    result = addNumbers();
+    alert(result);
+</script>
+
+</body>
+</html>

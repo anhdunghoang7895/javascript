@@ -4,8 +4,8 @@
 <h3>Caro Game Simple</h3>
 <p id="carogame"/>
 <input type="button" value="Xturn" onclick="Xturn()">
-<input type="button" value="Yturn" onclick="Yturn()">
-<h6 id="game"></h6>
+<input type="button" value="Oturn" onclick="Oturn()">
+<h2 id="game"></h2>
 <script>
     var b = document.getElementById("carogame");
 
@@ -21,10 +21,10 @@
             data += board[i][j] + "&nbsp;&nbsp;";
         }
     }
-    document.write(data);
+    document.getElementById("game").innerHTML= data;
     function Xturn() {
         var positionX = prompt("X: ");
-        var positionY = prompt("Y: ");
+        var positionY = prompt("O: ");
         data = "";
         board[positionX][positionY] = "X";
         for(var i = 0; i < 5; i++) {
@@ -33,22 +33,22 @@
                 data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
             }
         }
-        data += "<br/><br/><input type='button' value='Yturn' onclick='Yturn()'>";
-        document.write(data);
+        data += '<br><br><input type="button" value="Oturn" onclick="Oturn()">';
+        document.getElementById("game").innerHTML= data;
     }
-    function Yturn() {
+    function Oturn() {
         var positionX = prompt("X: ");
-        var positionY = prompt("Y: ");
+        var positionY = prompt("O: ");
         data = "";
-        board[positionX][positionY] = "Y";
+        board[positionX][positionY] = "O";
         for (var i = 0; i < 5; i++) {
             data += "<br/>";
             for (var j = 0; j < 5; j++) {
                 data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
             }
         }
-        data += "<br/><br/><input type='button' value='Xturn' onclick='Xturn()'>";
-        document.write(data);
+        data +='<br><br><input type="button" value="Xturn" onclick="Xturn()">';
+        document.getElementById("game").innerHTML= data;
     }
 </script>
 </body>

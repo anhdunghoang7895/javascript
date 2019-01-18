@@ -1,0 +1,21 @@
+<html>
+<head>
+	<p>Nhập chữ bất kỳ</p>
+</head>
+<body>
+<input id="bars" type="text" onkeypress= thuchien()>
+<script>
+	var chuoi_ky_tu= "griffin did nothing wrong";
+	var chuoi= chuoi_ky_tu.split('');
+	var replace= document.getElementById("bars").value;
+	var i= 0;
+	function thuchien() {
+		if (i<chuoi.length){
+			replace = chuoi[i];
+			console.log(replace);
+			i++;
+		}
+	}
+</script>
+</body>
+</html>

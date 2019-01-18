@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type='text' id="star_name" value=''>
+<button id='press' onclick='search()' value='find'>Search</button>
+<p id="hienthi"></p>
+<script>
+    var starName= ['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
+    var groupStars= ['Ursa Minor','Tarurus','Cygnus','Lyra','Aquila','Ursa Major','Leo'];
+    function search() {
+        var input = document.getElementById('star_name').value;
+        console.log(input);
+        for (i = 0; i < starName.length; i++) {
+            if (input === starName[i]) {
+                document.getElementById("hienthi").innerHTML= groupStars[i];
+            }
+        }
+    }
+</script>
+</body>
+</html>

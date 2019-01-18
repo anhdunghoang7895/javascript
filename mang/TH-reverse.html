@@ -6,15 +6,18 @@
 </head>
 <body>
 <script>
-    var x = [-3,5,1,3,2,10];
+    var z = prompt("nhập dãy số: ");
+    var y = z.toString();
+    var x = [y[0]];
     var first = 0;
-    var last = x.length - 1;
+    var last = y.length - 1;
     while (first < last) {
-        var b = x[first];
-        x[first] = x[last];
-        x[last] = b;
+        var b = y[first];
+        y[first] = y[last];
+        y[last] = b;
         first++;
         last--;
+        x.push(b);
     }
     document.write(x);
 </script>

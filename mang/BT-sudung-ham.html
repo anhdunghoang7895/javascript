@@ -25,20 +25,21 @@
 
 </script>
 <script>
-    var text = "The Quick Brown Fox";
+    var text = prompt("nhập");
+    var chain= text.toString();
     var Caplock= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var lowcap= "abcdefghijklmnopqrstuvwxyz";
     var change= [];
-    for (var i = 0; i < text.length; i++) {
-        if (Caplock.indexOf(text[i] !== -1)) {
-            change.push(text[i].toLowerCase());
-            console.log(change);
+    for (var i = 0; i < chain.length; i++) {
+        if (Caplock.indexOf(chain[i] !== -1)) {
+            change.push(chain[i].toLowerCase());
+            console.log(chain);
         }
-        else if(lowcap.indexOf(str[x]) !== -1) {
-                change.push(str[x].toUpperCase());
+        else if(lowcap.indexOf(chain[x]) !== -1) {
+                change.push(chain[x].toUpperCase());
             }
             else {
-                change.push(str[x]);
+                change.push(chain[x]);
             }
         }
     document.write(change.join(''));

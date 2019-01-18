@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var number= parseInt(prompt("nhập số để tính giai thừa: "));
+    var giaithua = 1;
+    for (var i = 1; i <= number; i++){
+        giaithua = giaithua * i;
+        console.log(i);
+    }
+    document.write(giaithua);
+</script>
+<script>
+    var num1= parseInt(prompt("nhập"));
+    var num2= parseInt(prompt("nhập"));
+    var num3= parseInt(prompt("nhập"));
+    if ((num1 < num2)&&(num1 < num3)){
+        document.write(num1 + " là số nhỏ nhất");
+    }
+    else if (num2 < num3){
+        document.write(num2 + " là số nhỏ nhất");
+    }
+    else document.write(num3 + " là số nhỏ nhất");
+</script>
+<script>
+    var text= prompt("nhập alphabet");
+    check();
+    function check() {
+        if (text == "a" || text == "i" ||  text == "e" || text == "u" || text == "o"){
+            alert(true);
+        }
+        else if (text == "A" || text == "I" || text == "E" || text == "U" || text == "O"){
+            alert(true);
+        }
+        else {
+            alert(false);
+        }
+    }
+</script>
+<script>
+    var mang= [];
+    var i = 0;
+    reverse();
+    function reverse() {
+        while (i < 2){
+            var so = prompt("nhập số: ");
+            mang.push(so);
+            i++;
+        }
+        var b = mang[0];
+        mang[0] = mang[1];
+        mang[1] = b;
+    }
+    document.write(mang);
+</script>
+<script>
+    var randomNum = prompt('');
+    var input = prompt('');
+    var mang = input.split('');
+    var count = 0;
+    check();
+    function check() {
+        for (var i = 0; i < mang.length; i++){
+            if (randomNum === mang[i]){
+                count++;
+            }
+        }
+    }
+    alert(count);
+</script>
+</body>
+</html>

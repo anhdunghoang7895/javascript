@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<p>
+    <label>Meter</label>
+    <input id="inputmeter" type="number" placeholder="Meter"
+           oninput="Converter(this.value)"
+           onchange="Converter(this.value)">
+</p>
+<p>feet: <span id="feet"></span></p>
+<p>
+    <label>feet</label>
+    <input id="inputfeet" type="number" placeholder="Feet"
+           oninput="Converter1(this.value)"
+           onchange="Converter1(this.value)">
+</p>
+<p>Meter: <span id="meter"></span></p>
+<script>
+    function Converter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("feet").innerHTML = (valNum*3.279);
+    }
+    function Converter1(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("meter").innerHTML = (valNum/3.279);
+    }
+</script>
+
+</body>
+</html>
