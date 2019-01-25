@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+<script>
+    var hinhchunhat = function(dai,rong){
+        this.getdai = function(){
+            return this.dai;
+        }
+        this.getrong = function(){
+            return this.rong;
+        }
+        this.getChuvi = function () {
+            return (dai+rong)*2;
+        }
+        this.getDientich = function(){
+            return dai*rong;
+        }
+    }
+    var hinhchunhat = new hinhchunhat(6,4,);
+    var Chuvi = hinhchunhat.getChuvi();
+    var Dientich = hinhchunhat.getDientich();
+    alert("chu vi "+ Chuvi + " / " + "Diện tích " + Dientich);
+
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.rect(80, 20, 200, 100);
+    ctx.stroke();
+
+</script>
+
+</body>
+</html>

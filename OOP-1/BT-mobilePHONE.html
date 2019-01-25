@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SIMPLE MOBILE PHONE</title>
+</head>
+<body>
+	<div>
+		<textarea rows="4" cols="50" id="inputMessage"></textarea><br>
+		lượng pin: <p id="battery"></p>
+		trạng thái: <p id="Status"></p>
+	</div>
+	<div>
+		<button type="submit" value="PinNokia" onclick="NokiaPin(this.value)">nút nguồn</button>
+
+	</div>
+	<script type="text/javascript" charset="utf-8" async defer>
+		class Mobile{
+			constructor(luongPin, status){
+				this.luongPin = luongPin;
+				this.status = status;
+			}
+			KiemTraPin(){
+				document.getElementById("battery").innerHTML= this.luongPin;
+			}
+			switchy(){
+				if (this.status === false) {
+					this.status = true;
+					document.getElementById("Status").innerHTML= "đã bật";
+					
+				}
+				else {
+					this.status = false;
+					document.getElementById("Status").innerHTML= "đã tắt";
+					this.luongPin--;
+				}
+			}
+			dkTatMay(){
+				if (this.luongPin == 0) {
+					this.status = false;
+					document.getElementById("battery").innerHTML= this.luongPin;
+					document.getElementById("Status").innerHTML= "đã tắt";
+				}
+			}
+		}
+		var Nokia = new Mobile(100, false);
+		function NokiaPin(value){
+			Nokia.KiemTraPin();
+			Nokia.switchy();
+			Nokia.dkTatMay();
+		}
+	</script>
+</body>
+</html>

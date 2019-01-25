@@ -1,0 +1,90 @@
+<html>
+<head>
+	
+</head>	
+<body>
+	<div>
+		<input type="submit" id="myNokia" onclick="nokiaaa(this.value)" value="Nokia Status" >	
+		<input type="submit" id="myIphone" onclick="Iphoneee(this.value)" value="Iphone Status" >
+		<input type="text" id="myText" ">	
+	</div>
+	<script type="text/javascript" charset="utf-8" async defer>
+		class Mobile {
+			constructor(_type, _pin, _status,_myText){
+				this.type = _type;
+				this.pin = _pin;
+				this.status = _status;
+				this.myText= _myText;
+			}
+			Checkstatus(){
+				if(this.status){
+					alert("đang on");
+				}
+				else {
+					alert("đang off");
+				}
+			}
+			batTatdienthoai(){
+				if (this.status) {
+					this.status = false;
+				}
+				else{
+					this.status = true;
+				}
+			}
+			checkPin(){
+				if (this.pin <= 3) {
+					alert("số pin còn lại: " + this.pin);
+				}				
+			}
+			MinusBattery(){	
+				if (this.pin > 0){
+					this.pin--;
+					if (this.pin < 3){
+						alert('sạc pin');
+					}
+				}
+				else {
+					alert("shutting down")
+				};
+			}
+			TypeMessage(){
+				var myText = document.getElementById("myText").value;
+				this.myText = myText.split();
+				console.log(this.myText);
+			}
+			DeliverMessage(){
+				if(this.type === "nokia"){
+					alert('nokia: ' + this.myText);
+				}
+				else if(this.type === "Iphone"){
+					alert('Iphone: ' + this.myText);
+				}
+			}
+		}
+		var myNokia = new Mobile("nokia", 10, true, myText);
+		var myIphone = new Mobile("Iphone", 10, false, myText);
+		var clickNokia = document.getElementById("myNokia");
+		function nokiaaa(value){
+			if (value === "Nokia Status"){
+				myNokia.batTatdienthoai();
+			}
+			myNokia.Checkstatus();
+			myNokia.MinusBattery();
+			myNokia.checkPin();
+			myNokia.TypeMessage();
+			myNokia.DeliverMessage();
+		}	
+		function Iphoneee(value){
+			if (value === "Iphone Status"){
+				myIphone.batTatdienthoai();
+			}
+			myIphone.Checkstatus();
+			myIphone.MinusBattery();
+			myIphone.checkPin();
+			myIphone.TypeMessage();
+			myIphone.DeliverMessage();
+		}
+	</script>	
+</body>	
+</html>

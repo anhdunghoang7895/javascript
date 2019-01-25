@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<p id="game"></p> 
+	<script>
+		class pictures{
+			constructor(image, top, left, size){
+				this.image = image;
+				this.top = top;
+				this.left = left;
+				this.size = size;
+			}
+			getHeroElement(){
+				return '<img width="'+ this.size + '"' +' height="'+ this.size + '"' +' src="' + this.image +'"' +' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+			}
+			moveRight(){
+				this.left += 20;
+				console.log('ok: ' + this.left);
+			}
+		}
+		var pikachu = new pictures('pikachu.png',20,30,300);
+		function start(){
+			if(pikachu.left < window.innerWidth - pikachu.size){
+				pikachu.moveRight();
+			}
+			document.getElementById('game').innerHTML = pikachu.getHeroElement();
+			setTimeout(start, 500);
+		}
+		start();
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style>
+    table, td {
+      border: 1px solid black;
+  }
+</style>
+</head>
+<body>
+    <table id="caroTable">
+        <tr>
+            <td>""</td>
+            <td>""</td>
+        </tr>
+        <tr>
+            <td>""</td>
+            <td>""</td>
+        </tr>
+    </table>
+    <script>
+        var table = document.getElementById("caroGame");
+        var i = 0;
+        var j = 0;
+        while (i < 20){
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            i++;
+        }
+    </script>
+</body>
+</html>

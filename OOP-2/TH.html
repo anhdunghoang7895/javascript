@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		class Shape{
+			constructor(radius){
+				this._radius= radius;
+			}
+			chuvi(){
+			return 3.14*2*this._radius;
+			}
+		}
+		var Circle = new Shape(2);
+		var radius = Circle._radius;
+		var area = Circle.chuvi();
+		alert("radius: "+ radius+" ;area: "+ area);
+	</script>
+</body>
+</html>

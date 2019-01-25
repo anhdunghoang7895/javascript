@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var temperature = function (Celcius) {
+        if (Celcius > -273){
+            this.getFahrenheit = function () {
+                return (Celcius * (9/5)) + 32;
+        }
+            this.getKenvin = function () {
+                return Celcius + 273.15;
+            }
+        }
+        else alert("wrong number");
+    }
+    var temp = new temperature(50);
+    var Fahrenheit = temp.getFahrenheit();
+    var Kenvin = temp.getKenvin();
+    document.write("độ F " + Fahrenheit +  "/Độ K " + Kenvin);
+</script>
+</body>
+</html>
