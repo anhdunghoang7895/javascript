@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		public static void main(String[] args) {
+    int score = 5;
+    int soCuaMay, soNguoiChoiDoan;
+    String ketQua = "";
+    Scanner scanner = new Scanner(System.in);
+
+
+    while (true) {
+    	Random rd = new Random();
+       
+        soCuaMay = 1 + rd.nextInt(5);
+
+        System.out.print("Mời bạn đoán số: ");
+        soNguoiChoiDoan = scanner.nextInt();
+
+        if (soNguoiChoiDoan != soCuaMay) {
+        	ketQua = "==> Bạn đoán sai!";
+        	System.out.println(ketQua);
+        	score--;
+        } else {
+        	ketQua = "==> Bạn đoán đúng!";
+        	System.out.println(ketQua);
+        	score++;
+        }
+
+        if (score == 0) {
+        	System.out.println("Game Over!");
+        	break;
+        } 
+
+        if (score == 10) {
+        	System.out.println("Congratulations! You Win!");
+        	break;
+        }
+    }
+}
+</script>
+</body>
+</html>

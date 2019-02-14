@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		function EmailValidate(str){
+			regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;			
+			if (regexp.test(str)) {
+				return true;
+			}
+			else {return false;}
+		}
+		var email = 'a@gmail.com';
+		console.log(EmailValidate(email));
+		var email2 = 'ab@yahoo.com';
+		console.log(EmailValidate(email2));
+		var email3 = '@gmail.com';
+		console.log(EmailValidate(email3));
+	</script>
+</body>
+</html>

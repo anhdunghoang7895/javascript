@@ -23,14 +23,22 @@
 				this.left += 20;
 				console.log('ok: ' + this.left);
 			}
+			movedown(){
+				this.top += 20;
+				console.log('ok: ' + this.top);
+			}
+			
 		}
 		var pikachu = new pictures('pikachu.png',20,30,300);
 		function start(){
-			if(pikachu.left < window.innerWidth - pikachu.size){
+			if(pikachu.left <= window.innerWidth - pikachu.size){
 				pikachu.moveRight();
 			}
+			if(pikachu.top < window.innerHeight - pikachu.size){
+				pikachu.movedown();
+			}
 			document.getElementById('game').innerHTML = pikachu.getHeroElement();
-			setTimeout(start, 500);
+			setTimeout(start, 100);
 		}
 		start();
 	</script>

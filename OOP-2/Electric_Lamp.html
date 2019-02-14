@@ -13,10 +13,36 @@
 	<input type="submit" value="switchON" onclick="ON(this.value)">
 	<input type="submit" value="switchOFF" onclick="OFF(this.value)">
 	<script>
-		class switch1{
-			constructor(status,type){
+		class switchButton{
+			constructor(Lamp,lanBat,lanTat){
+				this.lanBat = lanBat;
+				this.lanTat = lanTat;
+				this._Lamp = Lamp;
+			}
+			turnOn(){
+				if (this.lanBat <= 10 && this._Lamp === true){
+					this.lanBat--;
+					document.getElementById('soDem').value= this.lanBat;
+				}
+
+				if(this.lanBat == 0){
+					this.lanBat++;
+					alert ("Đã bật 10 lần");
+				}
+			}
+			turnOff(){
+				if (this.lanTat =< 10 && this._Lamp === false){
+					this.lanTat--;
+					if(this.lanTat == 0){
+						this.lanTat++;
+						alert ("Đã tắt 10 lần");
+					}
+				}
+			}
+		}
+		class Lamp {
+			constructor(status){
 				this.status = status;
-				this._type = type;
 			}
 			switchOn(){
 				if (this.status === false) {
@@ -30,49 +56,24 @@
 					document.getElementById('trangthai').innerHTML= "off";
 				}
 			}
-		}
-		class Lamp extends switch1{
-			constructor(status,lanBat,lanTat){
-				super(status);
-				this.lanBat = lanBat;
-				this.lanTat = lanTat;
-			}
-			turnOn(){
-				if (this.lanBat <= 10 && this.status === true ){
-					this.lanBat--;
-					document.getElementById('soDem').value= this.lanBat;
-					if(this.lanBat == 0){
-						this.lanBat++;
-						alert ("Đã bật 10 lần");
-					}
-				}
-
-			}
-			turnOff(){
-				if (this.lanTat <= 10 && this.status === false){
-					this.lanTat--;
-					if(this.lanTat == 0){
-						this.lanTat++;
-						alert ("Đã tắt 10 lần");
-					}
-				}
-			}
+			
 
 		}
-		var congTac = new switch1(false, "electric");
-		var electricLamp = new Lamp(false, 10, 10);
+		var congTac = new switchButton(Lamp,10, 10);
+		var electricLamp = new Lamp(false);
 		document.getElementById('trangthai').innerHTML= "off";
 		document.getElementById('soDem').innerHTML= "10";
 		function ON(value){
 			if (value === "switchON" ){
 				electricLamp.switchOn();
-				electricLamp.turnOn();
+				congTac.turnOn();
+				console.log(congTac);
 			}
 		}
 		function OFF(value){
 			if (value === "switchOFF"){
 				electricLamp.switchOff();
-				electricLamp.turnOff();
+				congTac.turnOff();
 			}
 		}
 
